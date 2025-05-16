@@ -260,6 +260,10 @@ pagination:
     before: 2
     after: 2
 
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:categories/:year/:month/:day/:title/
 
 # Plugins (previously gems:)
 plugins:
@@ -324,18 +328,21 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      sidebar: true
+      read_time: # true
       comments: # true
-      share: true
-      related: true
+      share: # true
+      related: # true
 
+  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-      read_time: true
+      sidebar: true
+      read_time: # rue
       comments: # true
       share: # true
       related: # true

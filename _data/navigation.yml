@@ -1,14 +1,23 @@
 # main links
 main:
+  - title: "Home"
+    url: /
   - title: "About"
     url: /about
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+
+sidebar:
+  nav: "sidebar-category"
+
+sidebar-category:
+  - title: "Development"
+    children:
+      - title: "TypeScript"
+        url: /categories/typescript/
+      - title: "React"
+        url: /categories/react/
+  - title: "우당퉁탕"
+    children:
+      - title: "일상"
+        url: /categories/daily/
+      - title: "사진찍기"
+        url: /categories/take_a_photo/
