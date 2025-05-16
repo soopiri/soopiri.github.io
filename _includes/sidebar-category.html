@@ -1,0 +1,21 @@
+{% assign categories = site.categories %}
+<nav class="nav__list">
+  <ul class="nav__items">
+    {% for category in site.data.navigation.sidebar-category %}
+      <li>
+        <span class="nav__sub-title">{{ category.title }}</span>
+        <ul>
+          {% for subcategory in category.children %}
+            {% assign subcategory_name = subcategory.title | split: " (" | first %}
+            {% assign posts = site.categories[subcategory_name] | default: [] %}
+            <li>
+              <a href="{{ subcategory.url }}">
+                {{ subcategory_name }} {% if posts.size > 0 %}({{ posts.size }}){% else %}(0){% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
